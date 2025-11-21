@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>table</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../css/table.css" />
+</head>
+
+<body>
+  <div class="header">
+    <img src="../Assets/Img/Logo.PNG" alt="Logo" id="logo" />
+    <a href="./index.html" id="returnHome">Retour à l'accueil</a>
+    <a href="" id="restart">recommencer</a>
+  </div>
+  <div id="case"></div>
+
+  <div id="game-container">
+    <table class="chess-board">
+      <tr>
+        <td data-value="a8" class="white number">8</td>
+        <td data-value="b8" class="blue"></td>
+        <td data-value="c8" class="white"></td>
+        <td data-value="d8" class="blue"></td>
+        <td data-value="e8" class="white"></td>
+        <td data-value="f8" class="blue"></td>
+        <td data-value="g8" class="white"></td>
+        <td data-value="h8" class="blue"></td>
+      </tr>
+      <tr>
+        <td data-value="a7" class="blue number">7</td>
+        <td data-value="b7" class="white"></td>
+        <td data-value="c7" class="blue"></td>
+        <td data-value="d7" class="white"></td>
+        <td data-value="e7" class="blue"></td>
+        <td data-value="f7" class="white"></td>
+        <td data-value="g7" class="blue"></td>
+        <td data-value="h7" class="white"></td>
+      </tr>
+      <tr>
+        <td data-value="a6" class="white number">6</td>
+        <td data-value="b6" class="blue"></td>
+        <td data-value="c6" class="white"></td>
+        <td data-value="d6" class="blue"></td>
+        <td data-value="e6" class="white"></td>
+        <td data-value="f6" class="blue"></td>
+        <td data-value="g6" class="white"></td>
+        <td data-value="h6" class="blue"></td>
+      </tr>
+      <tr>
+        <td data-value="a5" class="blue number">5</td>
+        <td data-value="b5" class="white"></td>
+        <td data-value="c5" class="blue"></td>
+        <td data-value="d5" class="white"></td>
+        <td data-value="e5" class="blue"></td>
+        <td data-value="f5" class="white"></td>
+        <td data-value="g5" class="blue"></td>
+        <td data-value="h5" class="white"></td>
+      </tr>
+      <tr>
+        <td data-value="a4" class="white number">4</td>
+        <td data-value="b4" class="blue"></td>
+        <td data-value="c4" class="white"></td>
+        <td data-value="d4" class="blue"></td>
+        <td data-value="e4" class="white"></td>
+        <td data-value="f4" class="blue"></td>
+        <td data-value="g4" class="white"></td>
+        <td data-value="h4" class="blue"></td>
+      </tr>
+      <tr>
+        <td data-value="a3" class="blue number">3</td>
+        <td data-value="b3" class="white"></td>
+        <td data-value="c3" class="blue"></td>
+        <td data-value="d3" class="white"></td>
+        <td data-value="e3" class="blue"></td>
+        <td data-value="f3" class="white"></td>
+        <td data-value="g3" class="blue"></td>
+        <td data-value="h3" class="white"></td>
+      </tr>
+      <tr>
+        <td data-value="a2" class="white number">2</td>
+        <td data-value="b2" class="blue"></td>
+        <td data-value="c2" class="white"></td>
+        <td data-value="d2" class="blue"></td>
+        <td data-value="e2" class="white"></td>
+        <td data-value="f2" class="blue"></td>
+        <td data-value="g2" class="white"></td>
+        <td data-value="h2" class="blue"></td>
+      </tr>
+      <tr>
+        <td data-value="a1" class="blue">
+          <div id="number1" class="number">1</div>
+          <div id="lettera" class="letter">a</div>
+        </td>
+        <td data-value="b1" class="white letter">b</td>
+        <td data-value="c1" class="blue letter">c</td>
+        <td data-value="d1" class="white letter">d</td>
+        <td data-value="e1" class="blue letter">e</td>
+        <td data-value="f1" class="white letter">f</td>
+        <td data-value="g1" class="blue letter">g</td>
+        <td data-value="h1" class="white letter">h</td>
+      </tr>
+    </table>
+    <div class="scores-container">
+      <div class="score-timer-block">
+        <div class="label">Score :</div>
+        <div id="score">0</div>
+      </div>
+      <div class="score-timer-block">
+        <div class="label">High score :</div>
+        <div id="highScore" data-mode="chrono_1">0</div>
+      </div>
+      <div class="score-timer-block">
+        <div class="label">Timer :</div>
+        <div id="timer">1:00</div>
+      </div>
+      <a href="./chrono-1-inverse.html"><img src="../Assets/Img/switch.png" alt="inverse le plateau" id="switch"></a>
+    </div>
+  </div>
+
+  <script type="module" src="../js/game.js" defer></script>
+  <script type="module">
+    import { startGame } from "../js/game.js";
+    startGame();
+  </script>
+</body>
+
+</html>
