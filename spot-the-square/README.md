@@ -1,5 +1,5 @@
 # Spot The Square
-
+#[OUVRIR LE JEU](/html/index.html)
 ## 🎯 Description
 **Spot The Square** est une application web inspirée du jeu [Vision de chess.com](https://www.chess.com/vision).  
 Elle aide les joueurs d’échecs à visualiser rapidement les 64 cases de l’échiquier.  
