@@ -622,27 +622,35 @@ document.addEventListener('DOMContentLoaded', loadSkills);
    ========================================= */
 
 async function loadSkills() {
-    const hardSkillsContainer = document.querySelector('.skills-category:nth-child(1) .skills-list');
-    const softSkillsContainer = document.querySelector('.skills-category:nth-child(2) .skills-list');
-
-    // Vérifier que les conteneurs existent
-    if (!hardSkillsContainer || !softSkillsContainer) {
-        console.warn('Conteneurs de compétences non trouvés');
+    // Sélection plus robuste : prendre tous les .skills-list et les assigner par index
+    const allSkillsLists = document.querySelectorAll('.skills-category .skills-list');
+    
+    if (allSkillsLists.length < 2) {
+        console.warn('Conteneurs de compétences non trouvés', allSkillsLists.length);
         return;
     }
+    
+    const hardSkillsContainer = allSkillsLists[0];
+    const softSkillsContainer = allSkillsLists[1];
 
     // Message de chargement
+
+
     hardSkillsContainer.innerHTML = '<p style="width:100%; text-align:center;">Chargement...</p>';
     softSkillsContainer.innerHTML = '<p style="width:100%; text-align:center;">Chargement...</p>';
 
     try {
+
         const response = await fetch(SKILLS_API_URL);
 
+        
         if (!response.ok) {
             throw new Error(`Erreur HTTP: ${response.status}`);
         }
 
         const data = await response.json();
+
+
 
         // Vider les conteneurs
         hardSkillsContainer.innerHTML = '';
